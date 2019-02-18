@@ -1,0 +1,23 @@
+{
+  "name": "v-ui",
+  "version": "1.0.0",
+  "description": "Vue-UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krystalry/V-UI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "krystalry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krystalry/V-UI/issues"
+  },
+  "homepage": "https://github.com/krystalry/V-UI#readme"
+}
