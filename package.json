@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/krystalry/V-UI/issues"
   },
-  "homepage": "https://github.com/krystalry/V-UI#readme"
+  "homepage": "https://github.com/krystalry/V-UI#readme",
+  "dependencies": {
+    "vue": "^2.6.6"
+  }
 }
