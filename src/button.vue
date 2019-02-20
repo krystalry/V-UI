@@ -1,12 +1,19 @@
 <template>
-    <!--方法一：-->
-    <button class="g-button" v-if="!iconPosition || iconPosition === 'left'">
-        <svg v-if="icon" class="icon">
-            <use :xlink:href=`#i-${icon}`></use>
-        </svg>
-        <slot></slot>
-    </button>
-    <button class="g-button" v-else>
+    <!--方法1：-->
+    <!--<button class="g-button" v-if="iconPosition === 'right'">-->
+        <!--<slot></slot>-->
+        <!--<svg v-if="icon" class="icon">-->
+            <!--<use :xlink:href=`#i-${icon}`></use>-->
+        <!--</svg>-->
+    <!--</button>-->
+    <!--<button class="g-button" v-else>-->
+        <!--<svg v-if="icon" class="icon">-->
+            <!--<use :xlink:href=`#i-${icon}`></use>-->
+        <!--</svg>-->
+        <!--<slot></slot>-->
+    <!--</button>-->
+    <!--方法2：-->
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
         <slot></slot>
         <svg v-if="icon" class="icon">
             <use :xlink:href=`#i-${icon}`></use>
@@ -16,7 +23,19 @@
 
 <script>
     export default{
-        props: [`icon`,`iconPosition`]
+//        写法1
+//        props: [`icon`,`iconPosition`]
+//        写法2
+        props: {
+            icon: {},
+            iconPosition: {
+                type:String,
+                default: 'left',
+                validator(value) {
+                    return value ==='left' || value ==='right'
+                }
+            }
+        }
     }
 </script>
 
