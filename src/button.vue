@@ -30,10 +30,14 @@
 </template>
 
 <script>
+    import Icon from './icon.vue'
     export default{
 //        写法1
 //        props: [`icon`,`iconPosition`]
 //        写法2
+        components:{
+          'g-icon': Icon
+        },
         props: {
             icon: {},
             loading:{

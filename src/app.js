@@ -31,6 +31,7 @@ chai.use(spies)
 const expect = chai.expect
 // 单元测试
 {
+    //测试按钮是否含有icon
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -45,6 +46,7 @@ const expect = chai.expect
     vm.$destroy()
 }
 {
+    //测试loading状态
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -100,7 +102,8 @@ const expect = chai.expect
         }
     })
     vm.$mount()
-    let spy = chai.spy(function(){})
+    let spy = chai.spy(function () {
+    })
 
     vm.$on('click', spy)
     // 希望这个函数被执行
